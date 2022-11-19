@@ -1,0 +1,27 @@
+<div class="overlay">
+    <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+
+        
+            <div class="shadow-lg bg-white ms-1">
+                <label class="form-label">User</label>
+                <input type="text" class="form-control" id="user" name="user"required formControlName="user">
+                <div *ngIf ="loginForm.get('user')?.touched && loginForm.get('user')?.errors?.['required']"class="alert alert-danger">This field is required</div>
+                <!-- <div [hidden]="name.valid||name.pristine" class="alert alert-danger">This field is required</div> -->
+                <div *ngIf ="loginForm.get('user')?.touched && loginForm.get('user')?.errors?.['minlength']"class="alert alert-danger">The name must have more than {{loginForm.get('user')?.errors?.['minlength'].requiredLength}} characters</div>
+                
+                <label for="" class="form-label">Password</label>
+                <input type="text" class="form-control" id="pass"name="pass" required formControlName="pass">
+                <div *ngIf ="loginForm.get('pass')?.touched && loginForm.get('pass')?.errors?.['required']"class="alert alert-danger">This field is required</div>
+                <!-- <div [hidden]="name.valid||name.pristine" class="alert alert-danger">This field is required</div> -->
+                <div *ngIf ="loginForm.get('pass')?.touched && loginForm.get('pass')?.errors?.['minlength']"class="alert alert-danger">The name must have more than {{loginForm.get('pass')?.errors?.['minlength'].requiredLength}} characters</div>
+                
+                <div class="">
+                    <button class="btn btn-primary"[disabled]="loginForm.invalid">Login</button>
+                </div>
+            </div>
+    </form>
+</div>
+
+
+
+
