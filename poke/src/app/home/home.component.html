@@ -2,8 +2,9 @@
 <div class="container">
     <div class="row">
         <div class="col-4">
-            <app-list></app-list>
+            <app-list *ngFor="let pokemon of(data)"></app-list>
         </div>
+        <button (click)="prueba()"></button>
         <div class="col-auto">
             <app-info></app-info>
         </div>
