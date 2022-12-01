@@ -1,12 +1,14 @@
-<app-nav></app-nav>
+
 <div class="container">
     <div class="row">
-        <div class="col-4">
-            <app-list *ngFor="let pokemon of(data)"></app-list>
+        <div class="col-2">
+            <app-list></app-list>
+            <!-- *ngFor="let pokemon of(data) -->
         </div>
-        <button (click)="prueba()"></button>
-        <div class="col-auto">
+        
+        <div class="col-10">
             <app-info></app-info>
         </div>
     </div>
 </div>
+

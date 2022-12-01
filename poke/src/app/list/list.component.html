@@ -1,3 +1,9 @@
-<div class="col-4">
-    
+<div class="" *ngFor="let pokemon of data">
+    <mat-card class="example-card list mat-card-extra">
+        <!-- <mat-card-title-group> -->
+          <mat-card-title class="mat-card-title-extra">{{pokemon.name}}</mat-card-title>
+          
+          <img class="card-image"mat-card-sm-image src="{{pokemon.image}}" >
+        <!-- </mat-card-title-group> -->
+      </mat-card>
 </div>

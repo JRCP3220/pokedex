@@ -1,34 +1,39 @@
-<div class="col-8">
+<!-- <div class="info" *ngFor="let pokemon of data" >
     <div class="card" style="width: 18rem;">
-        <img src="{{data[4]?.image}}" class="card-img-top" alt="...">
+        <img src="{{pokemon.image}}" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">{{data[1]?.position}}.- {{data[1]?.name|uppercase}}</h5>
+          <h5 class="card-title">{{pokemon.position}}.- {{data[1]?.name|uppercase}}</h5>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
           <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
+      </div> -->
+      <div class="container">
+        <div class="row">
+          <div class="col-2" *ngFor="let pokemon of data">
+            <mat-card class="example-card" >
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>{{pokemon.position}}</mat-card-title>
+                <mat-card-subtitle>{{pokemon.name}}</mat-card-subtitle>
+              </mat-card-header>
+              <img mat-card-image src="{{pokemon.image}}" alt="Photo of a Shiba Inu">
+              <mat-card-content>
+                <p>
+                  info
+                </p>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-button>LIKE</button>
+                <button mat-button>SHARE</button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+        </div>
       </div>
       
-      <mat-card class="example-card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>{{data[0]?.position}}</mat-card-title>
-          <mat-card-subtitle>{{data[0]?.name}}</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="{{data[0]?.image}}" alt="Photo of a Shiba Inu">
-        <mat-card-content>
-          <p>
-            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-            bred for hunting.
-          </p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-button>LIKE</button>
-          <button mat-button>SHARE</button>
-        </mat-card-actions>
-      </mat-card>
       
-      
+     
+    
+  
       
 
-</div>

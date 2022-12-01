@@ -15,4 +15,7 @@ export class DataService{
     getPokes(index: any){
         return this.http.get<any>(`${this.API}/pokemon/${index}`);
     }
+    getTypes(index:any){
+        return this.http.get<any>(`${this.API}/type/${index}`);
+    }
 }
